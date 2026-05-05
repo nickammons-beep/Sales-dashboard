@@ -13,5 +13,6 @@ export async function POST(req: Request) {
     body: JSON.stringify(body),
   })
 
-  return Response.json(await res.json())
+  const data = await res.json()
+  return Response.json(data)
 }
